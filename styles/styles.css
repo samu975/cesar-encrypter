@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+
+main {
+  padding: 0.7rem 0.7rem;
+  width: 100%;
+  height: 27rem;
+  border: none;
+}
+
+.main textarea {
+  padding: 1.2rem 0.7rem;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  color: #0a3871;
+  border: none;
+  text-align: left;
+  border-radius: 7px;
+}
+
+.main textarea::placeholder {
+  color: #0a3871;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.main textarea:hover {
+  cursor: pointer;
+}
+
+.main textarea:focus {
+  cursor: text;
+}
+
+.image-aside {
+  display: none;
+}
+.buttons-section {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.exclamation-icon {
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/bi_exclamation-circle-fill.png");
+  background-repeat: no-repeat;
+}
+.alert-message {
+  display: block;
+  float: right;
+  width: 70%;
+  color: #495057;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-left: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  width: 80%;
+  margin: 15px auto;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  max-width: 340px;
+}
+
+.hidden {
+  display: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 120px;
+  padding: 0 0.7rem;
+  margin: 10px 0 25px 0;
+  box-shadow: 3px 22px 40px -8px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 3px 22px 40px -8px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 3px 22px 40px -8px rgba(0, 0, 0, 0.45);
+}
+.grid h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.grid p {
+  padding: 0 10px;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+#result-text {
+  margin-top: 35px;
+  font-size: 1.2rem;
+  height: 27rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+#encriptar-btn {
+  background-color: #0a3871;
+  color: #ffffff;
+}
+#desencriptar-btn {
+  background-color: #ffffff;
+  color: #0a3871;
+}
+#copiar-btn {
+  background-color: #0a3871;
+  color: #ffffff;
+}
+
+/* ---------------------------------- media queries -------------- */
+
+@media only screen and (min-width: 26.625em) {
+  .buttons-section {
+    margin: 3% 0;
+  }
+  .main textarea {
+    width: 100%;
+  }
+  .main {
+    margin: 2% 2%;
+    width: 96%;
+    overflow: hidden;
+  }
+  .grid {
+    width: 96%;
+    margin: 4% 2%;
+  }
+}
+
+@media only screen and (min-width: 63.9375em) {
+  body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 20%;
+  }
+
+  .main {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main textarea {
+    width: 70%;
+    height: 60%;
+    background-color: #e5e5e5;
+  }
+
+  .main textarea:focus {
+    outline: none;
+    border: none;
+  }
+  .grid {
+    width: 70%;
+    height: 90%;
+    margin: 20px auto;
+    box-shadow: none;
+    background-color: #ffffff;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 15% 25%;
+    border-radius: 10px;
+  }
+  .grid p {
+    padding: 40px 0;
+  }
+  .image-aside {
+    padding-top: 90px;
+    width: 326px;
+    display: block;
+    background-color: #ffffff;
+    margin: 0 auto;
+    height: 304px;
+  }
+
+  .alert-message {
+    margin-right: 200px;
+  }
+
+  .buttons-section {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+}
+/* 1200 px */
+@media only screen and (min-width: 75em) {
+  body {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 60% 40%;
+    overflow: hidden;
+  }
+  .exclamation-icon {
+    display: none;
+  }
+  .alert-message {
+    margin-left: 100px;
+    margin-right: 600px;
+    font-size: 1.4rem;
+  }
+  .btn {
+    font-size: 1.4rem;
+  }
+  #result-section {
+    grid-row: 1 / span 2;
+    overflow: hidden;
+  }
+  .grid {
+    margin: 7% 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .main {
+    margin-top: 10%;
+  }
+  .main textarea {
+    padding: 0 10%;
+    justify-self: flex-end;
+    font-size: 3rem;
+  }
+  .main textarea::placeholder {
+    font-size: 3rem;
+  }
+  .grid h3 {
+    padding: 0 5%;
+    font-size: 2rem;
+  }
+  .grid p {
+    padding: 0 2%;
+    padding-top: 0;
+    font-size: 1.7rem;
+    align-self: flex-start;
+  }
+  .image-aside {
+    width: auto;
+  }
+  #result-text {
+    padding-left: 7%;
+    font-size: 2.2rem;
+  }
+  .buttons-section {
+    grid-column: 1/ 2;
+  }
+}

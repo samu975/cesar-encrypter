@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Textos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <textarea
+        type="text"
+        name="texto"
+        id="mensaje"
+        placeholder="Ingrese el texto aqui"
+      >
+      </textarea>
+    </main>
+
+    <section class="buttons-section">
+      <i class="exclamation-icon"></i>
+      <p class="alert-message">Solo letras y sin acentos</p>
+      <button id="encriptar-btn" class="btn">Encriptar</button>
+      <button id="desencriptar-btn" class="btn">Desencriptar</button>
+    </section>
+    <section id="result-section">
+      <div id="hidden" class="grid">
+        <img
+          src="./img/Muñeco.png"
+          alt="Imagen de una persona con una lupa"
+          class="image-aside"
+        />
+        <h3>Ningún mensaje fue encontrado</h3>
+        <p>Ingrese el texto que desees encriptar o desencriptar</p>
+      </div>
+      <div id="result-div" class="result-area hidden">
+        <textarea id="result-text" value=""> </textarea>
+        <button id="copiar-btn" class="btn">Copiar</button>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
